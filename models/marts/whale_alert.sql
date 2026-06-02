@@ -10,7 +10,7 @@ WITH WHALES as(
 
     group by output_address
     order by total_sent desc
-),
+)
 select
     w.total_sent,
     w.output_address,

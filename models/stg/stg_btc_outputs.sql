@@ -1,7 +1,7 @@
 {{
     config(
         materialized='incremental',
-        schema='append'
+        incremental_strategy='append'
     )
 }}
 
