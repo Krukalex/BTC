@@ -12,6 +12,7 @@ WITH WHALES as(
     order by total_sent desc
 )
 select
+    '{{invocation_id}}' as invocation_id,
     w.total_sent,
     w.output_address,
     w.tx_count,

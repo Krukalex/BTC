@@ -1,7 +1,8 @@
 {{
     config(
         materialized='incremental',
-        incremental_strategy='append'
+        incremental_strategy='append',
+        static_analysis = 'strict'
     )
 }}
 
@@ -23,6 +24,7 @@ where f.value:address is not null
 {% endif %}
 )
 select
+'{{invocation_id}}' as invocation_id,
 hash_key,
 block_number,
 block_timestamp,
