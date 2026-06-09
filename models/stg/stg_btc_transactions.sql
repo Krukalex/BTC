@@ -1,4 +1,4 @@
-{{config(materialized = 'ephemeral')}}
+{{config(materialized = 'table', static_analysis = 'strict')}}
 
 select
     *
