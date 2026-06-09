@@ -6,7 +6,7 @@ WITH WHALES as(
         count(*) as tx_count
     from {{ ref('stg_btc_transactions') }} t
 
-    where output_value > 11
+    where output_value > 10
 
     group by output_address
     order by total_sent desc
